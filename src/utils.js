@@ -6,8 +6,6 @@ const covid19ImpactEstimator = (data) => {
   const { avgDailyIncomeInUSD, avgDailyIncomePopulation } = region;
 
   const availableBeds = Math.ceil(0.35 * totalHospitalBeds);
-  // const availableBeds = Math.floor(0.35 * totalHospitalBeds);
-  // const availableBeds = parseInt(0.35 * totalHospitalBeds, 10);
   // const timeToElapseInt = Math.floor(timeToElapse);
   let numDays = timeToElapse;
 
@@ -16,9 +14,6 @@ const covid19ImpactEstimator = (data) => {
   } else if (periodType === 'months') {
     numDays = timeToElapse * 30;
   }
-
-  // test
-  // numDays = Math.floor(numDays);
 
   const setsOfThreeDays = Math.floor(numDays / 3);
 
@@ -51,4 +46,4 @@ const covid19ImpactEstimator = (data) => {
   return { data: input, impact, severeImpact };
 };
 
-export default covid19ImpactEstimator;
+module.exports = covid19ImpactEstimator;
