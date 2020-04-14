@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Estimate covid-19 infection rate and effects"
+    />
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Covid-19 Estimator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <a href="#"> <h1 class="logo">Covid-19 Estimator</h1> </a>
+      </header>
+
+      <main class="form-content">
+        <div>
+          <h1>Enter your values below</h1>
+          <!-- <p>Some stuff</p> -->
+        </div>
+
+        <form action="">
+          <div class="form-input">
+            <label for="population">Population</label>
+            <input
+              name="population"
+              data-population
+              type="number"
+              placeholder="Population"
+              id="population"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="reportedCases">Reported Cases</label>
+            <input
+              data-reported-cases
+              name="reportedCases"
+              type="number"
+              placeholder="Reported Cases"
+              id="reportedCases"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="totalHospitalBeds">Total Hospital Beds</label>
+            <input
+              data-total-hospital-beds
+              name="totalHospitalBeds"
+              type="number"
+              placeholder="Total Hospital Beds"
+              id="totalHospitalBeds"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="timeToElapse">Period</label>
+            <input
+              data-time-to-elapse
+              type="number"
+              placeholder="Days, Weeks or Months To Elapse"
+              id="timeToElapse"
+              name="timeToElapse"
+            />
+          </div>
+
+          <div class="form-input">
+            <label for="periodType">Period Type</label>
+            <select name="periodType" id="periodType" data-period-type>
+              <option value="days">Days</option>
+              <option value="weeks">Weeks</option>
+              <option value="months">Months</option>
+            </select>
+          </div>
+
+          <div class="submit">
+            <input type="submit" value="ESTIMATE" data-go-estimate/>
+          </div>
+        </form>
+      </main>
+
+      <footer>
+        <a class="a-footer" href="#"><p>Made by Fisayo</p> </a>
+      </footer>
+    </div>
+  </body>
+</html>
